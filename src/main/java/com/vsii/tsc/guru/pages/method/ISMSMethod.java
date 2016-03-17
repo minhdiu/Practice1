@@ -31,6 +31,13 @@ public void GotoISMSPage(){
     objISMSPage.ISMSHelpdesk_btn.click();
 }
 
+public void ClickComposeISMSRequest(){
+    objISMSPage.ComposeISMSRequest.click();
+}
+public void ClickISMSissue(){
+    objISMSPage.ISMSIssue.click();
+}
+
 public void VerifyISMSAdmin(){
    Assert.assertTrue(objISMSPage.AssetCategories.getSize()!=null);
    Assert.assertTrue(objISMSPage.Assets.getSize()!=null);
