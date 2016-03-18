@@ -5,9 +5,8 @@
     <classes>
       <class name="com.vsii.tsc.guru.testcase.Home">
         <methods>
-          <include name="teardownSuite"/>
-          <include name="setupSuite"/>
-          <include name="TC03"/>
+          <include name="TC02" invocation-numbers="0"/>
+          <include name="TC03" invocation-numbers="0"/>
           <include name="setupClass"/>
         </methods>
       </class> <!-- com.vsii.tsc.guru.testcase.Home -->

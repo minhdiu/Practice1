@@ -31,19 +31,20 @@ public class Home extends TestBase
         TestBase.methodName = "TC01";
         objLogin.verifyLoginPage();          
     }
-   @Test(priority = 1, description = "Admin_Verify that ISMS Helpdesk is displayed correctly_User is admin or ISMS Managers")
-    public void TC02() throws IOException {     
+   @Test(priority = 1, description = "Admin_Verify that ISMS Helpdesk is displayed correctly_User is admin or ISMS Managers"
+       ,dataProvider = "login", dataProviderClass = TestData.class)
+    public void TC02(String username, String password) throws IOException {     
         TestBase.methodName = "TC02";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        objLogin.login("admin","12345678"); 
+        objLogin.login(username,password); 
         objISMS.GotoISMSPage();
         objISMS.VerifyISMSAdmin();
     }
-    //@Test(priority = 2, description = "Verify that ISMS Helpdesk is displayed correctly_User is not admin or ISMS Managerss")
-    public void TC03() throws IOException {     
+ @Test(priority = 2, description = "Verify that ISMS Helpdesk is displayed correctly_User is not admin or ISMS Managerss",dataProvider = "login", dataProviderClass = TestData.class)
+    public void TC03(String username, String password) throws IOException {     
         TestBase.methodName = "TC03";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        objLogin.login("diuttm","ddduong123*");
+        objLogin.login(username,password);
         objISMS.GotoISMSPage();
         objISMS.VerifyISMSnotAdmin();
     }

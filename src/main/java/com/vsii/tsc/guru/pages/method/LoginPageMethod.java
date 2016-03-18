@@ -1,16 +1,18 @@
 package com.vsii.tsc.guru.pages.method;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-
+import org.apache.log4j.Logger;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.vsii.tsc.guru.pages.LoginPage;
 
 public class LoginPageMethod {	
 	ExtentReports extent;
 	
-	//Logger log = Logger.getLogger("minhdiu");
+	Logger log = Logger.getLogger("trunghung");
 	
 	WebDriver driver;
 
@@ -19,25 +21,24 @@ public class LoginPageMethod {
 	public LoginPageMethod(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, objLoginPage);
-		//log.debug("Initiate web driver");
+		log.debug("Initiate web driver");
 	}
 
-	// Enter user name in UserID text box
+	
 	public void setUsername(String txtUsername) {		
 		objLoginPage.Username_txb.sendKeys(txtUsername);
-		//log.debug("Set username");
+		log.debug("Set username");
 	}
 
-	// Enter password in password text box
 	public void setPassword(String txtPassword) {		
 		objLoginPage.Password_txb.sendKeys(txtPassword);
-		//log.debug("Set password");
+		log.debug("Set password");
 	}
 
-	// Click Login button
+
 	public void clickLogin() {
 		objLoginPage.Login_btn.click();
-		//log.debug("Click Login button");
+		log.debug("Click Login button");
 	}
 
 	public void verifyLoginPage() {
@@ -48,7 +49,7 @@ public class LoginPageMethod {
     }
 	
 	public void login(String username, String password) {
-	
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		this.setUsername(username);
 	//	ExtentReporterNG.test.log(LogStatus.INFO, "Input user name");
 		

@@ -1,6 +1,7 @@
 package com.vsii.tsc.guru.pages.method;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -32,6 +33,7 @@ public void GotoISMSPage(){
 }
 
 public void ClickComposeISMSRequest(){
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     objISMSPage.ComposeISMSRequest.click();
 }
 public void ClickISMSissue(){
@@ -62,4 +64,34 @@ public void VerifyISMSnotAdmin(){
     //Assert.assertEquals(0,objISMSPage.AssetCategories).Size());
 //    Assert.assertTrue(!isElementPresent(By.linkText("Empresas en Misión")));
  }
+public void getTitlePopup(){
+    String title = objISMSPage.composeTitle.getText();
+    Assert.assertEquals(title, "Compose ISMS Request");    
+}
+public void getComposeIssueLable(){
+    String title = objISMSPage.composeIssue_label.getText();
+    Assert.assertEquals(title, "What is the issue?");    
+}
+public void getComposeCategoryLable(){
+    String title = objISMSPage.composeCategory_lable.getText();
+    Assert.assertEquals(title, "Please choose a category");    
+}
+public void getComposeProblemLable(){
+    String title = objISMSPage.composeProblem_lable.getText();
+    Assert.assertEquals(title, "What problem is your issue relating to? ");    
+}
+public void getSimilarIssueLable(){
+    String title = objISMSPage.similarIssue_lable.getText();
+    Assert.assertEquals(title, "Anything is similar with your issue?");    
+}
+public void VerifyComposeISMSReuestPopUp(){
+
+    getTitlePopup();
+    getComposeIssueLable();
+    getComposeCategoryLable();
+    getComposeProblemLable();
+    getSimilarIssueLable();
+   
+}
+
 }
