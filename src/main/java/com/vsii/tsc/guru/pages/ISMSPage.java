@@ -6,9 +6,12 @@ import org.openqa.selenium.support.FindBy;
 public class ISMSPage
 { 
     @FindBy(xpath = "//*[contains(text(),'ISMS Helpdesk')]")
-  //input[contains(@name,'pass')]
-
     public WebElement ISMSHelpdesk_btn;
+    
+    @FindBy(xpath = "//*[contains(text(),'Diu-Tran Thi Minh Diu')]")
+    public WebElement namename;
+    @FindBy(xpath = "//*[contains(text(),'Log out')]")
+    public WebElement logout_btn;
     
     @FindBy(xpath = "//*[contains(text(),'ISMS Request')]")
     public WebElement ISMSRequest;

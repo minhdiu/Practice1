@@ -100,7 +100,7 @@ public class TestBase {
 	@AfterSuite
 	public void teardownSuite() throws Exception {
 		driver.quit();
-		SendMail.execute();
+		//SendMail.execute();
 	}
 
 }

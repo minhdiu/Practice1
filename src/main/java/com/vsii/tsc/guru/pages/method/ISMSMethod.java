@@ -12,6 +12,7 @@ import org.testng.Assert;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.vsii.tsc.guru.pages.ISMSPage;
+import com.vsii.tsc.utility.TestBase;
 
 public class ISMSMethod
 {
@@ -48,21 +49,18 @@ public void VerifyISMSAdmin(){
    Assert.assertTrue(objISMSPage.ISMSRequest.getSize()!=null);
    Assert.assertTrue(objISMSPage.IssueManagement.getSize()!=null);  
 }
-
+public void logout(){
+    objISMSPage.namename.click();
+    objISMSPage.logout_btn.click();
+}
 public void VerifyISMSnotAdmin(){
-    List<WebElement> el = driver.findElements(By.xpath("//*"));
-
-    for ( WebElement e : el ) {
-      System.out.println(e.getTagName()+ ":"+ e.getText());
-    }
-  //  Assert.assertTrue(objISMSPage.AssetCategories.getSize()==null);
-  //  Assert.assertTrue(objISMSPage.Assets.getSize()==null);
-//    Assert.assertTrue(objISMSPage.ComposeISMSRequest.getSize()!=null);
-//    Assert.assertTrue(objISMSPage.ISMSIssue.getSize()!=null);
-//    Assert.assertTrue(objISMSPage.ISMSRequest.getSize()!=null);
-// 
-    //Assert.assertEquals(0,objISMSPage.AssetCategories).Size());
-//    Assert.assertTrue(!isElementPresent(By.linkText("Empresas en Misión")));
+    
+ // Assert.assertTrue(objISMSPage.AssetCategories.getSize()==null);
+ // Assert.assertTrue(objISMSPage.Assets.getSize()==null);
+  Assert.assertTrue(objISMSPage.ComposeISMSRequest.getSize()!=null);
+ Assert.assertTrue(objISMSPage.ISMSIssue.getSize()!=null);
+  Assert.assertTrue(objISMSPage.ISMSRequest.getSize()!=null);
+ 
  }
 public void getTitlePopup(){
     String title = objISMSPage.composeTitle.getText();

@@ -42,6 +42,7 @@ public class LoginPageMethod {
 	}
 
 	public void verifyLoginPage() {
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    String loginPageTitle = driver.getTitle();
         Assert.assertTrue(loginPageTitle.contains("OpenERP"));
         Assert.assertTrue(objLoginPage.Username_txb.getSize()!=null );

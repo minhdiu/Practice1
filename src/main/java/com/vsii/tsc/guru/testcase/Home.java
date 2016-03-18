@@ -16,7 +16,7 @@ import com.vsii.tsc.guru.testdata.TestData;
 import com.vsii.tsc.utility.CommonOperations;
 import com.vsii.tsc.utility.TestBase;
 
-public class Home extends TestBase
+public class Home 
 {
     LoginPageMethod objLogin; 
     ISMSMethod objISMS;
@@ -26,64 +26,34 @@ public class Home extends TestBase
         objISMS = new ISMSMethod(TestBase.driver);
     }
 
-    //@Test(priority = 0, description = "Verify OpenERP can open correctly")
+   // @Test(priority = 0, description = "Verify OpenERP can open correctly")
     public void TC01() throws IOException {     
         TestBase.methodName = "TC01";
         objLogin.verifyLoginPage();          
     }
-   @Test(priority = 1, description = "Admin_Verify that ISMS Helpdesk is displayed correctly_User is admin or ISMS Managers"
-       ,dataProvider = "login", dataProviderClass = TestData.class)
+   //@Test(priority = 2, description = "Admin_Verify that ISMS Helpdesk is displayed correctly_User is admin or ISMS Managers"
+       //,dataProvider = "Adminlogin", dataProviderClass = TestData.class)
     public void TC02(String username, String password) throws IOException {     
         TestBase.methodName = "TC02";
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         objLogin.login(username,password); 
         objISMS.GotoISMSPage();
         objISMS.VerifyISMSAdmin();
     }
- @Test(priority = 2, description = "Verify that ISMS Helpdesk is displayed correctly_User is not admin or ISMS Managerss",dataProvider = "login", dataProviderClass = TestData.class)
+ @Test(priority = 1, description = "Verify that ISMS Helpdesk is displayed correctly_User is not admin or ISMS Managerss",dataProvider = "notAdminlogin", dataProviderClass = TestData.class)
     public void TC03(String username, String password) throws IOException {     
-        TestBase.methodName = "TC03";
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        TestBase.methodName = "TC03";     
         objLogin.login(username,password);
         objISMS.GotoISMSPage();
         objISMS.VerifyISMSnotAdmin();
+        objISMS.logout();
     }
-//    @Test(priority = 2, description = "verify Login", dataProvider = "dpLogin", dataProviderClass = TestData.class)
-//    public void LO02(String username, String password, String message) throws Exception {
-//
-//        //get method's name
-//        TestBase.methodName = "LO02";
-//        // perform login
-//        objLogin.loginToManagerPage(username, password);
-//
-//        // input invalid account, having popup. If not, login successfully
-//        if (CommonOperations.isAlertPresent(TestBase.driver)) {
-//            // Get popup's text
-//            String txtPopup = objLogin.getPopupText();
-//            Assert.assertTrue(txtPopup.contains(message));
-//        } else {
-//            String managerID;
-//            managerID = objLogin.getManagerIDInManagerPage();
-//            Assert.assertTrue(managerID.contains(message));
-//        }
-//    }
-//    
-//     @Test(priority = 1, description = "verify_Reset_Button", dataProvider = "dpReset", dataProviderClass = TestData.class)
-//     public void LO03(String username, String password) throws Exception {
-//        //get method's name
-//        TestBase.methodName = "LO03";
-//        objLogin.setUserID(username);
-//        objLogin.setPassword(password);
-//        objLogin.clickReset();
-//        Assert.assertEquals(objLogin.getUserID(), "");
-//        Assert.assertEquals(objLogin.getPassword(), "");
-//     }
-//
-//    @AfterMethod
-//    public void afterMethod() throws Exception {
-//        CommonOperations.takePicture();
-//   }
-//
+
+  @AfterMethod
+  public void afterMethod() throws Exception {
+    CommonOperations.takePicture();
+    TestBase.driver.quit();
+  }
+
 //   @AfterClass
 //    public void teardownClass() {
 //       objLogin = null;    
