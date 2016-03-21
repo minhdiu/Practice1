@@ -2,46 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="29537" started-at="2016-03-18T10:08:37Z" finished-at="2016-03-18T10:09:07Z">
+  <suite name="Default suite" duration-ms="16680" started-at="2016-03-21T09:05:59Z" finished-at="2016-03-21T09:06:15Z">
     <groups>
     </groups>
-    <test name="Login" duration-ms="29537" started-at="2016-03-18T10:08:37Z" finished-at="2016-03-18T10:09:07Z">
-      <class name="com.vsii.tsc.utility.TestBase">
-        <test-method status="PASS" signature="setupSuite()[pri:0, instance:com.vsii.tsc.utility.TestBase@aa5eb0]" name="setupSuite" is-config="true" duration-ms="19589" started-at="2016-03-18T17:08:18Z" finished-at="2016-03-18T17:08:37Z">
+    <test name="Default test" duration-ms="16680" started-at="2016-03-21T09:05:59Z" finished-at="2016-03-21T09:06:15Z">
+      <class name="com.vsii.tsc.guru.testcase.ComposeISMS">
+        <test-method status="PASS" signature="setupSuite()[pri:0, instance:com.vsii.tsc.guru.testcase.ComposeISMS@1b64c45]" name="setupSuite" is-config="true" duration-ms="10303" started-at="2016-03-21T16:05:48Z" finished-at="2016-03-21T16:05:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSuite -->
-        <test-method status="PASS" signature="teardownSuite()[pri:0, instance:com.vsii.tsc.utility.TestBase@aa5eb0]" name="teardownSuite" is-config="true" duration-ms="0" started-at="2016-03-18T17:09:07Z" finished-at="2016-03-18T17:09:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardownSuite -->
-      </class> <!-- com.vsii.tsc.utility.TestBase -->
-      <class name="com.vsii.tsc.guru.testcase.Home">
-        <test-method status="PASS" signature="setupClass()[pri:0, instance:com.vsii.tsc.guru.testcase.Home@3498ed]" name="setupClass" is-config="true" duration-ms="105" started-at="2016-03-18T17:08:37Z" finished-at="2016-03-18T17:08:37Z">
+        <test-method status="PASS" signature="setupClass()[pri:0, instance:com.vsii.tsc.guru.testcase.ComposeISMS@1b64c45]" name="setupClass" is-config="true" duration-ms="42" started-at="2016-03-21T16:05:59Z" finished-at="2016-03-21T16:05:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupClass -->
-        <test-method status="PASS" signature="TC03(java.lang.String, java.lang.String)[pri:1, instance:com.vsii.tsc.guru.testcase.Home@3498ed]" name="TC03" duration-ms="16963" started-at="2016-03-18T17:08:42Z" description="Verify that ISMS Helpdesk is displayed correctly_User is not admin or ISMS Managerss" data-provider="notAdminlogin" finished-at="2016-03-18T17:08:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[diuttm]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ddduong123*]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="TC05()[pri:0, instance:com.vsii.tsc.guru.testcase.ComposeISMS@1b64c45]" name="TC05" duration-ms="16615" started-at="2016-03-21T16:05:59Z" description="Verify that user can report a issue" finished-at="2016-03-21T16:06:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC03 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.vsii.tsc.guru.testcase.Home@3498ed]" name="afterMethod" is-config="true" duration-ms="7540" started-at="2016-03-18T17:08:59Z" finished-at="2016-03-18T17:09:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.vsii.tsc.guru.testcase.Home -->
-    </test> <!-- Login -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- TC05 -->
+      </class> <!-- com.vsii.tsc.guru.testcase.ComposeISMS -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

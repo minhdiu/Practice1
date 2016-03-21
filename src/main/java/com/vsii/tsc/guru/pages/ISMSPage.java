@@ -33,7 +33,7 @@ public class ISMSPage
     @FindBy(xpath = "//*[contains(text(),'Asset Categories')]")
     public WebElement AssetCategories;
     
-    @FindBy(id="oe-field-input-37")
+    @FindBy(xpath="html/body/div[2]/div[2]/div/div/div/div/div[4]/div/div/table/tbody/tr[1]/td[2]/span")
     public WebElement composeIssue_txb;
     
     @FindBy(id="oe-field-input-38")
@@ -51,20 +51,20 @@ public class ISMSPage
     @FindBy(xpath=".//*[@id='ui-id-4']")
     public WebElement composeTitle;
     
-    @FindBy(xpath="//tr[1]/td[1]/label")
+    @FindBy(xpath="html/body/div[2]/div[2]/div/div/div/div/div[4]/div/div/table/tbody/tr[1]/td[1]")
     public WebElement composeIssue_label;
     
-    @FindBy(xpath="//tr[2]/td[1]/label]")
+    @FindBy(xpath="html/body/div[2]/div[2]/div/div/div/div/div[4]/div/div/table/tbody/tr[2]/td[1]")
     public WebElement composeCategory_lable;
     
-    @FindBy(xpath="//tr[3]/td[1]/label")
+    @FindBy(xpath="html/body/div[2]/div[2]/div/div/div/div/div[4]/div/div/table/tbody/tr[3]/td[1]")
     public WebElement composeProblem_lable;
     
-    @FindBy(xpath="//tr[4]/td[1]/label")
+    @FindBy(xpath="html/body/div[2]/div[2]/div/div/div/div/div[4]/div/div/table/tbody/tr[4]/td[1]")
     public WebElement similarIssue_lable;
     
-    @FindBy(xpath="//div[1]/textarea")
-    public WebElement descripIssue_lable;
+//    @FindBy(xpath="//div[1]/textarea")
+//    public WebElement descripIssue_lable;
     
     @FindBy(xpath="//div[2]/div[11]/div/footer/button[1]")
     public WebElement composeSend_btn;

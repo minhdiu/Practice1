@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.vsii.tsc.guru.testcase.Home">
+      <class name="com.vsii.tsc.guru.testcase.ComposeISMS">
         <methods>
-          <include name="setupSuite"/>
-          <include name="afterMethod"/>
+          <include name="teardownSuite"/>
           <include name="setupClass"/>
-          <include name="TC01"/>
+          <include name="setupSuite"/>
+          <include name="TC05"/>
         </methods>
-      </class> <!-- com.vsii.tsc.guru.testcase.Home -->
+      </class> <!-- com.vsii.tsc.guru.testcase.ComposeISMS -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -97,7 +97,7 @@ public class TestBase {
 		// extent = ExtentReporterNG.Instance();
 	}
 
-	@AfterSuite
+	//@AfterSuite
 	public void teardownSuite() throws Exception {
 		driver.quit();
 		//SendMail.execute();

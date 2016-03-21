@@ -4,7 +4,7 @@
 <listeners>
         <listener class-name="com.vsii.tsc.utility.ExtentReporterNG"/> 
 </listeners>
-  <test name="Login" preserve-order="true">
+  <test name="IMSM" preserve-order="true">
     <classes>
       <class name="com.vsii.tsc.utility.TestBase"/>
   <class name="com.vsii.tsc.guru.testcase.Home"/> 

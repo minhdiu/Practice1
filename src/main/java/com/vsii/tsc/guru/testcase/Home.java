@@ -1,15 +1,11 @@
 package com.vsii.tsc.guru.testcase;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.vsii.tsc.guru.pages.LoginPage;
 import com.vsii.tsc.guru.pages.method.ISMSMethod;
 import com.vsii.tsc.guru.pages.method.LoginPageMethod;
 import com.vsii.tsc.guru.testdata.TestData;
@@ -26,13 +22,13 @@ public class Home
         objISMS = new ISMSMethod(TestBase.driver);
     }
 
-   // @Test(priority = 0, description = "Verify OpenERP can open correctly")
+   @Test(priority = 0, description = "Verify OpenERP can open correctly")
     public void TC01() throws IOException {     
         TestBase.methodName = "TC01";
         objLogin.verifyLoginPage();          
     }
-   //@Test(priority = 2, description = "Admin_Verify that ISMS Helpdesk is displayed correctly_User is admin or ISMS Managers"
-       //,dataProvider = "Adminlogin", dataProviderClass = TestData.class)
+   @Test(priority = 2, description = "Admin_Verify that ISMS Helpdesk is displayed correctly_User is admin or ISMS Managers"
+       ,dataProvider = "Adminlogin", dataProviderClass = TestData.class)
     public void TC02(String username, String password) throws IOException {     
         TestBase.methodName = "TC02";
         objLogin.login(username,password); 
@@ -50,9 +46,9 @@ public class Home
 
   @AfterMethod
   public void afterMethod() throws Exception {
-    CommonOperations.takePicture();
-    TestBase.driver.quit();
-  }
+   CommonOperations.takePicture();
+  //TestBase.driver.quit();
+ }
 
 //   @AfterClass
 //    public void teardownClass() {

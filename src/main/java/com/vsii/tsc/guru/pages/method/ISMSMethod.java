@@ -34,6 +34,8 @@ public void GotoISMSPage(){
 }
 
 public void ClickComposeISMSRequest(){
+
+    GotoISMSPage();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     objISMSPage.ComposeISMSRequest.click();
 }
@@ -76,12 +78,16 @@ public void getComposeCategoryLable(){
 }
 public void getComposeProblemLable(){
     String title = objISMSPage.composeProblem_lable.getText();
-    Assert.assertEquals(title, "What problem is your issue relating to? ");    
+    Assert.assertEquals(title, "What problem is your issue relating to?");    
 }
 public void getSimilarIssueLable(){
     String title = objISMSPage.similarIssue_lable.getText();
     Assert.assertEquals(title, "Anything is similar with your issue?");    
 }
+//public void verifyissueBlank(){
+////    String title = objISMSPage.composeTitle.s();
+//    Assert.assertEquals( objISMSPage.composeIssue_txb.getSize(),"Enter your issue here...");    
+//}
 public void VerifyComposeISMSReuestPopUp(){
 
     getTitlePopup();
@@ -91,5 +97,9 @@ public void VerifyComposeISMSReuestPopUp(){
     getSimilarIssueLable();
    
 }
+public void ComposeISMSReuest(){
 
+    objISMSPage.composeIssue_txb.sendKeys("Causing confusion in the use for users");
+   
+}
 }

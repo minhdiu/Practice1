@@ -1,10 +1,5 @@
 package com.vsii.tsc.guru.testdata;
 
-import org.testng.annotations.Factory;
-
-import com.vsii.tsc.guru.testcase.EditCustomer;
-import com.vsii.tsc.guru.testcase.NewCustomer;
-
 public class TestDataFactory {
 	 //@Factory
 	 public Object[] loginToCreateNewCustomer() {
