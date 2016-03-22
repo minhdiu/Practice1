@@ -5,10 +5,9 @@
     <classes>
       <class name="com.vsii.tsc.guru.testcase.ComposeISMS">
         <methods>
-          <include name="teardownSuite"/>
           <include name="setupClass"/>
           <include name="setupSuite"/>
-          <include name="TC05"/>
+          <include name="TC06"/>
         </methods>
       </class> <!-- com.vsii.tsc.guru.testcase.ComposeISMS -->
     </classes>

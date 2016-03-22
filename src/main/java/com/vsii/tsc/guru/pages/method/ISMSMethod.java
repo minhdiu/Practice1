@@ -1,23 +1,17 @@
 package com.vsii.tsc.guru.pages.method;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-import com.relevantcodes.extentreports.ExtentReports;
 import com.vsii.tsc.guru.pages.ISMSPage;
-import com.vsii.tsc.utility.TestBase;
 
 public class ISMSMethod
-{
-ExtentReports extent;
-    
+{    
     //Logger log = Logger.getLogger("minhdiu");
     
     WebDriver driver;
@@ -26,17 +20,17 @@ ExtentReports extent;
 
     public ISMSMethod(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, objISMSPage);
-        //log.debug("Initiate web driver");
+        PageFactory.initElements(driver, objISMSPage);      
     }
+  
+    
 public void GotoISMSPage(){
     objISMSPage.ISMSHelpdesk_btn.click();
 }
 
 public void ClickComposeISMSRequest(){
 
-    GotoISMSPage();
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     objISMSPage.ComposeISMSRequest.click();
 }
 public void ClickISMSissue(){
@@ -56,9 +50,7 @@ public void logout(){
     objISMSPage.logout_btn.click();
 }
 public void VerifyISMSnotAdmin(){
-    
- // Assert.assertTrue(objISMSPage.AssetCategories.getSize()==null);
- // Assert.assertTrue(objISMSPage.Assets.getSize()==null);
+
   Assert.assertTrue(objISMSPage.ComposeISMSRequest.getSize()!=null);
  Assert.assertTrue(objISMSPage.ISMSIssue.getSize()!=null);
   Assert.assertTrue(objISMSPage.ISMSRequest.getSize()!=null);
@@ -84,10 +76,7 @@ public void getSimilarIssueLable(){
     String title = objISMSPage.similarIssue_lable.getText();
     Assert.assertEquals(title, "Anything is similar with your issue?");    
 }
-//public void verifyissueBlank(){
-////    String title = objISMSPage.composeTitle.s();
-//    Assert.assertEquals( objISMSPage.composeIssue_txb.getSize(),"Enter your issue here...");    
-//}
+
 public void VerifyComposeISMSReuestPopUp(){
 
     getTitlePopup();
@@ -95,11 +84,82 @@ public void VerifyComposeISMSReuestPopUp(){
     getComposeCategoryLable();
     getComposeProblemLable();
     getSimilarIssueLable();
-   
+   // verifyissueBlank();
+    verifyCategoryBlank();
+//   verifyproblemBlank();
+//   verifysimilarIssueBlank();
+//    verifyDescripBlank();
 }
-public void ComposeISMSReuest(){
+public void SetIssue(String issue){
 
-    objISMSPage.composeIssue_txb.sendKeys("Causing confusion in the use for users");
+    objISMSPage.composeIssue_txb.sendKeys(issue);
+   // webElement.sendKeys(Keys.TAB);
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+   // objISMSPage.composeIssue_txb.sendKeys(Keys.TAB);
+   
+}
+public void SetCategory(String category){   
+   // new Select(objISMSPage.composeCategory_txb).selectByVisibleText(category);       
+    objISMSPage.composeCategory_txb.sendKeys(category);
+    objISMSPage.composeCategory_txb.sendKeys(Keys.ARROW_DOWN);
+    objISMSPage.composeCategory_txb.sendKeys(Keys.ENTER);
+}
+
+public void SetProblem(String problem){    
+    //new Select(objISMSPage.composeProblem_txb).selectByVisibleText(problem);
+    objISMSPage.composeProblem_txb.sendKeys(problem);
+}
+
+public void SetsimilarIssue(String similarIssue){    
+   // new Select(objISMSPage.similarIssue_txb).selectByVisibleText(similarIssue);
+    objISMSPage.similarIssue_txb.sendKeys(similarIssue);
+}
+public void SetDescrip(String Descrip){    
+   // new Select(objISMSPage.descripIssue_txb).selectByVisibleText(Descrip);        
+    objISMSPage.descripIssue_txb.sendKeys(Descrip);
+}
+public void ClickcomposeSend(){    
+    objISMSPage.composeSend_btn.click();
+}
+public void verifyissueBlank(){    
+ Assert.assertEquals(objISMSPage.composeIssue_txb.getText(),"");
+}
+public void verifyCategoryBlank(){    
+   Assert.assertEquals(objISMSPage.composeCategory_txb.getText(),"");
+  }
+public void verifyproblemBlank(){    
+   Assert.assertEquals(objISMSPage.composeProblem_txb.getText(), "");
+  }
+public void verifysimilarIssueBlank(){    
+   Assert.assertEquals(objISMSPage.similarIssue_txb.getText(), "");
+  }
+public void verifyDescripBlank(){    
+   Assert.assertEquals(objISMSPage.descripIssue_txb.getText(), "");
+  }
+
+public void ComposeISMSReuest(String issue,String category){    
+    SetIssue(issue);
+   SetCategory(category);
+//SetProblem(problem);
+//SetsimilarIssue(similarIssue);
+// SetDescrip(Descrip);    
+   ClickcomposeSend();
+//   driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+//  driver.navigate().refresh();
+   //ClickISMSissue();
+   System.out.println(objISMSPage.issueNamefirstcol.getText());
+   Assert.assertEquals(objISMSPage.issueNamefirstcol.getText(), issue);
+}
+public void VerrifyISMSIssuesListdisplayedcorrectly(){
+    objISMSPage.issuecol.isDisplayed();
+    objISMSPage.contacrcol.isDisplayed();
+    objISMSPage.projectCol.isDisplayed();
+    objISMSPage.priorityCol.isDisplayed();
+    objISMSPage.dateCol.isDisplayed();
+    objISMSPage.assignCol.isDisplayed();
+    objISMSPage.progressCol.isDisplayed();
+    objISMSPage.StageCol.isDisplayed();
    
 }
 }
+
