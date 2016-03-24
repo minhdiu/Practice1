@@ -8,17 +8,17 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-import com.vsii.tsc.guru.pages.ISMSPage;
+import com.vsii.tsc.guru.pages.DiuTTM_ISMSPage;
 
-public class ISMSMethod
+public class DiuTTM_ISMSMethod
 {    
     //Logger log = Logger.getLogger("minhdiu");
     
     WebDriver driver;
 
-    public ISMSPage objISMSPage = new ISMSPage();
+    public DiuTTM_ISMSPage objISMSPage = new DiuTTM_ISMSPage();
 
-    public ISMSMethod(WebDriver driver) {
+    public DiuTTM_ISMSMethod(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, objISMSPage);      
     }

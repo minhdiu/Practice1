@@ -3,7 +3,7 @@ package com.vsii.tsc.guru.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage {
+public class DiuTTM_LoginPage {
 
 	@FindBy(name = "login")
     public

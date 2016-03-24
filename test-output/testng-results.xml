@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35064" started-at="2016-03-22T07:39:38Z" finished-at="2016-03-22T07:40:13Z">
+  <suite name="Default suite" duration-ms="58467" started-at="2016-03-23T08:25:40Z" finished-at="2016-03-23T08:26:38Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="35064" started-at="2016-03-22T07:39:38Z" finished-at="2016-03-22T07:40:13Z">
-      <class name="com.vsii.tsc.guru.testcase.ComposeISMS">
-        <test-method status="PASS" signature="setupSuite()[pri:0, instance:com.vsii.tsc.guru.testcase.ComposeISMS@11d970]" name="setupSuite" is-config="true" duration-ms="18729" started-at="2016-03-22T14:39:20Z" finished-at="2016-03-22T14:39:38Z">
+    <test name="Default test" duration-ms="58467" started-at="2016-03-23T08:25:40Z" finished-at="2016-03-23T08:26:38Z">
+      <class name="com.vsii.tsc.guru.testcase.ISMS_Project">
+        <test-method status="PASS" signature="setupSuite()[pri:0, instance:com.vsii.tsc.guru.testcase.ISMS_Project@1b64c45]" name="setupSuite" is-config="true" duration-ms="26499" started-at="2016-03-23T15:25:13Z" finished-at="2016-03-23T15:25:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSuite -->
-        <test-method status="PASS" signature="setupClass()[pri:0, instance:com.vsii.tsc.guru.testcase.ComposeISMS@11d970]" name="setupClass" is-config="true" duration-ms="414" started-at="2016-03-22T14:39:39Z" finished-at="2016-03-22T14:39:39Z">
+        <test-method status="PASS" signature="setupClass()[pri:0, instance:com.vsii.tsc.guru.testcase.ISMS_Project@1b64c45]" name="setupClass" is-config="true" duration-ms="49" started-at="2016-03-23T15:25:40Z" finished-at="2016-03-23T15:25:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupClass -->
-        <test-method status="PASS" signature="TC04()[pri:1, instance:com.vsii.tsc.guru.testcase.ComposeISMS@11d970]" name="TC04" duration-ms="18573" started-at="2016-03-22T14:39:39Z" description="Verify that the form Compose ISMS Request is opened correctly" finished-at="2016-03-22T14:39:58Z">
+        <test-method status="PASS" signature="TC09()[pri:2, instance:com.vsii.tsc.guru.testcase.ISMS_Project@1b64c45]" name="TC09" duration-ms="58382" started-at="2016-03-23T15:25:40Z" description="Verify that user can see the issues of a project 3" finished-at="2016-03-23T15:26:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC04 -->
-        <test-method status="PASS" signature="TC05()[pri:2, instance:com.vsii.tsc.guru.testcase.ComposeISMS@11d970]" name="TC05" duration-ms="1524" started-at="2016-03-22T14:39:58Z" description="Verify that user can report a issue" finished-at="2016-03-22T14:39:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC05 -->
-        <test-method status="PASS" signature="TC06()[pri:3, instance:com.vsii.tsc.guru.testcase.ComposeISMS@11d970]" name="TC06" duration-ms="14405" started-at="2016-03-22T14:39:59Z" description="Verify that ISMS Issues List is displayed correctly" finished-at="2016-03-22T14:40:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC06 -->
-      </class> <!-- com.vsii.tsc.guru.testcase.ComposeISMS -->
+        </test-method> <!-- TC09 -->
+      </class> <!-- com.vsii.tsc.guru.testcase.ISMS_Project -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -5,21 +5,21 @@ import java.io.IOException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.vsii.tsc.guru.pages.ISMSPage;
-import com.vsii.tsc.guru.pages.method.ISMSMethod;
-import com.vsii.tsc.guru.pages.method.LoginPageMethod;
+import com.vsii.tsc.guru.pages.DiuTTM_ISMSPage;
+import com.vsii.tsc.guru.pages.method.DiuTTM_ISMSMethod;
+import com.vsii.tsc.guru.pages.method.DiuTTM_LoginPageMethod;
 import com.vsii.tsc.utility.TestBase;
 
-public class ComposeISMS extends TestBase
+public class DiuTTM_ComposeISMS extends TestBase
 {
-    LoginPageMethod objLogin; 
-    ISMSMethod objISMS;
-    ISMSPage objISMSPage;
+    DiuTTM_LoginPageMethod objLogin; 
+    DiuTTM_ISMSMethod objISMS;
+    DiuTTM_ISMSPage objISMSPage;
     @BeforeClass
     public void setupClass() throws NumberFormatException, IOException {
-        objLogin = new LoginPageMethod(TestBase.driver);
-        objISMS = new ISMSMethod(TestBase.driver);
-        objISMSPage = new ISMSPage();
+        objLogin = new DiuTTM_LoginPageMethod(TestBase.driver);
+        objISMS = new DiuTTM_ISMSMethod(TestBase.driver);
+        objISMSPage = new DiuTTM_ISMSPage();
     }
 
   @Test(priority = 1, description = "Verify that the form Compose ISMS Request is opened correctly")

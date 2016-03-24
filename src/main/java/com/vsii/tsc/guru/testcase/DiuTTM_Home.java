@@ -6,20 +6,20 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.vsii.tsc.guru.pages.method.ISMSMethod;
-import com.vsii.tsc.guru.pages.method.LoginPageMethod;
+import com.vsii.tsc.guru.pages.method.DiuTTM_ISMSMethod;
+import com.vsii.tsc.guru.pages.method.DiuTTM_LoginPageMethod;
 import com.vsii.tsc.guru.testdata.TestData;
 import com.vsii.tsc.utility.CommonOperations;
 import com.vsii.tsc.utility.TestBase;
 
-public class Home 
+public class DiuTTM_Home 
 {
-    LoginPageMethod objLogin; 
-    ISMSMethod objISMS;
+    DiuTTM_LoginPageMethod objLogin; 
+    DiuTTM_ISMSMethod objISMS;
     @BeforeClass
     public void setupClass() throws NumberFormatException, IOException {
-        objLogin = new LoginPageMethod(TestBase.driver);
-        objISMS = new ISMSMethod(TestBase.driver);
+        objLogin = new DiuTTM_LoginPageMethod(TestBase.driver);
+        objISMS = new DiuTTM_ISMSMethod(TestBase.driver);
     }
 
    @Test(priority = 0, description = "Verify OpenERP can open correctly")
