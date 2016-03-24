@@ -116,9 +116,9 @@ public class ExtentReporterNG implements IReporter {
 
 				// Write test results to excel file
 				if (status.toString().equals("pass")) {
-					ExcelHandle.writeTestResults(method, 5, "Passed");
+					ExcelHandle.writeTestResults(method, 8, "Passed");
 				} else if (status.toString().equals("fail")) {
-					ExcelHandle.writeTestResults(method, 5, "Failed");
+					ExcelHandle.writeTestResults(method, 8, "Failed");
 				}
 
 				// Log test case's information

@@ -63,7 +63,12 @@ Assert.assertEquals(ObjecProject.email.getText(), "Email");
 Assert.assertEquals(ObjecProject.project.getText(), "Project");
 Assert.assertEquals(ObjecProject.priority.getText(), "Priority");
 Assert.assertEquals(ObjecProject.level.getText(), "Level");
-Assert.assertEquals(ObjecProject.type.getText(), "Type");}
+Assert.assertEquals(ObjecProject.type.getText(), "Type");
+Assert.assertEquals(ObjecProject.descriptionTab.getText(), "Description");
+Assert.assertEquals(ObjecProject.worklogTab.getText(), "Worklogs");
+Assert.assertEquals(ObjecProject.extraInfoTab.getText(), "Extra Info");
+Assert.assertEquals(ObjecProject.relationTab.getText(), "Relations");
+Assert.assertEquals(ObjecProject.relatedTaskTab.getText(), "Related Tasks");}
 
 public void VerifyissueofProject(){
     ObjecProject.taomoiCol.isDisplayed();
@@ -74,6 +79,34 @@ public void VerifyissueofProject(){
 }
 public void clickEditIssue(){
     ObjecProject.editIssue_btn.click();
+}
+public void selectType(String Type){
+	new Select(ObjecProject.type_drop).selectByVisibleText(Type);  	
+}
+public void verifyselecttypecorrect(String Type2){
+	Assert.assertEquals(ObjecProject.expectedType.getText(),Type2);
+}
+public void inputAssginee(String Assignee){
+	ObjecProject.assignto_txb.clear();
+	ObjecProject.assignto_txb.sendKeys(Assignee);
+}
+public void verifyselectassigncorrect(String Assignee2){
+	Assert.assertEquals(ObjecProject.expectedType.getText(),Assignee2);
+}
+public void clickSaveIssueBtn(){
+	ObjecProject.saveIssuebtn.click();
+}
+public void clickDoneBtn(){
+	ObjecProject.DoneBtn.click();
+}
+public void clickCancelIssueBtn(){
+	ObjecProject.cancelIssueBtn.click();
+}
+public void clickMoreBtn(){
+	ObjecProject.moreBtn.click();
+}
+public void selectDelete(){
+	ObjecProject.deleteIsueBtn.click();
 }
 }
 

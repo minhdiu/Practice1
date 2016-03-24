@@ -58,5 +58,35 @@ public class DiuTTM_ProjectPage
     public WebElement task;
     @FindBy(xpath = "html/body/div[1]/table/tbody/tr[3]/td[2]/div/div/table/tbody/tr[2]/td[1]/div/div[2]/span[1]/div/button")
     public WebElement editIssue_btn;
- 
-    }
+    @FindBy(xpath = ".//*[@id='ui-id-4']")
+    public WebElement descriptionTab;
+    @FindBy(xpath = ".//*[@id='ui-id-5']")
+    public WebElement worklogTab;
+    @FindBy(xpath = ".//*[@id='ui-id-6']")
+    public WebElement extraInfoTab;
+    @FindBy(xpath = ".//*[@id='ui-id-7']")
+    public WebElement relationTab;
+    @FindBy(xpath = ".//*[@id='ui-id-8']")
+    public WebElement relatedTaskTab;
+    @FindBy(xpath = " .//*[@id='oe-field-input-57']")
+    public WebElement type_drop;
+    @FindBy(xpath = "//table/tbody/tr/td[2]/table/tbody/tr[4]/td[2]/span")
+    public WebElement expectedType;    
+    @FindBy(xpath = ".//*[@id='oe-field-input-50']")
+    public WebElement assignto_txb; 
+    @FindBy(xpath = " html/body/div[1]/table/tbody/tr[3]/td[2]/div/div/table/tbody/tr[2]/td[1]/div/div[2]/span[2]/button")
+    public WebElement saveIssuebtn; 
+    
+    @FindBy(xpath = "html/body/div[1]/table/tbody/tr[3]/td[2]/div/div/div/div[4]/div/div[4]/div/div/header/button[4]")
+    public WebElement DoneBtn; 
+
+    @FindBy(xpath = "html/body/div[1]/table/tbody/tr[3]/td[2]/div/div/div/div[4]/div/div[4]/div/div/header/button[5]")
+    public WebElement cancelIssueBtn;
+
+    @FindBy(xpath = "html/body/div[1]/table/tbody/tr[3]/td[2]/div/div/table/tbody/tr[2]/td[2]/div/div/div/div[2]/button")
+    public WebElement moreBtn;
+    @FindBy(xpath = " html/body/div[1]/table/tbody/tr[3]/td[2]/div/div/table/tbody/tr[2]/td[2]/div/div/div/div[2]/ul/li[3]/a")
+    public WebElement deleteIsueBtn;
+    
+   
+}

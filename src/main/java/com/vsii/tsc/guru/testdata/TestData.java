@@ -15,11 +15,16 @@ public class TestData {
         Object[][] data = ExcelHandle.getTable("./data/TestData.xlsx", "Login", "TC03");
         return data;
     }
-//	@DataProvider(name = "dpValidateCustomer")
-//	public static Object[][] getValidateCustomerData() {
-//		Object[][] data = ExcelHandle.getTable("./data/TestData.xlsx", "CreateNewCustomer", "CN02");
-//		return data;
-//	}
+	@DataProvider(name="ISMSSelectType")
+    public static Object[][] ISMSSelectType() {
+        Object[][] data = ExcelHandle.getTable("./data/TestData.xlsx", "ISMSType", "TC10");
+        return data;
+    }
+	@DataProvider(name = "ISMSAssginIssue")
+	public static Object[][] getValidateCustomerData() {
+		Object[][] data = ExcelHandle.getTable("./data/TestData.xlsx", "ISMSType", "TC11");
+		return data;
+	}
 //	
 //	@DataProvider(name="dpNewCustomer")
 //	public static Object[][]  getCustomerData() {
